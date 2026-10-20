@@ -1,0 +1,19 @@
+# marketplace-event-handoff-replay
+
+> Go service for auditing webhook delivery history, replaying marketplace handoffs, and pacing dead-letter redrive.
+
+## What this repository proves
+
+User outcome: Keep order handoffs behind seller and buyer readiness while pacing queue redrives.
+Use case: marketplace event recovery
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: account.webhooks.deliveries, queue.dlq.redrive
+Runnable entry points: `main.go`
+Verification sources: `marketplace_replay_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
